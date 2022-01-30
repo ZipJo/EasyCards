@@ -1,14 +1,9 @@
 import Main from "./src/Main";
-import { DefaultTheme, Provider as PaperProvider } from "react-native-paper";
-
-const theme = {
-  ...DefaultTheme,
-  dark: true
-};
+import { DarkTheme, Provider as PaperProvider } from "react-native-paper";
 
 export default function App() {
   return (
-    <PaperProvider theme={theme}>
+    <PaperProvider theme={DarkTheme}>
       <Main />
     </PaperProvider>
   );
