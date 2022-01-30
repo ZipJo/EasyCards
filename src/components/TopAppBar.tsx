@@ -5,7 +5,6 @@ import AppContext from "../contexts/AppContext";
 
 const TopAppBar = () => {
   const { cards } = useContext(AppContext);
-  console.log(`cards`, cards);
   return (
     <>
       <StatusBar backgroundColor="transparent" barStyle="light-content" translucent />
