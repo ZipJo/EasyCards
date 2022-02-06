@@ -8,8 +8,8 @@ export default function Content() {
   return (
     <View>
       {!cards.length && <Text>This is looking a bit empty, don't you think?</Text>}
-      {cards.map(({ uriFront, uriBack }, key) => (
-        <RenderCard key={key} front={uriFront} back={uriBack} />
+      {cards.map(({ id, uriFront, uriBack }) => (
+        <RenderCard key={id} front={uriFront} back={uriBack} />
       ))}
     </View>
   );

@@ -4,12 +4,12 @@ import { useContext } from "react";
 import AppContext from "../contexts/AppContext";
 
 const TopAppBar = () => {
-  const { cards } = useContext(AppContext);
+  const { reverseCards } = useContext(AppContext);
   return (
     <>
       <StatusBar backgroundColor="transparent" barStyle="light-content" translucent />
       <Appbar.Header dark style={{ justifyContent: "flex-end" }}>
-        <Appbar.Action icon="sort" onPress={() => cards.reverse()} />
+        <Appbar.Action icon="sort" onPress={() => reverseCards()} />
       </Appbar.Header>
     </>
   );

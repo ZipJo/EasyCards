@@ -5,9 +5,11 @@ import Content from "./components/Content";
 import TopAppBar from "./components/TopAppBar";
 import AppContext from "./contexts/AppContext";
 import useAppContext from "./contexts/useAppContext";
+import AppLoading from "expo-app-loading";
 
 export default function Main() {
   const appContext = useAppContext();
+  if (!appContext) return <AppLoading />;
   return (
     <AppContext.Provider value={appContext}>
       <TopAppBar />
