@@ -1,5 +1,5 @@
 import { Appbar } from "react-native-paper";
-import { StatusBar, StyleSheet } from "react-native";
+import { StatusBar } from "react-native";
 import { useContext } from "react";
 import AppContext from "../contexts/AppContext";
 

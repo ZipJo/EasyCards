@@ -1,6 +1,6 @@
 import React from "react";
 
-type CardType = {
+export type CardType = {
   id: number;
   uriFront: string;
   uriBack: string;
@@ -12,15 +12,17 @@ export interface AppContextDto {
   setAddCardDrawerOpen: React.Dispatch<React.SetStateAction<boolean>>;
   cards: CardType[];
   addCard: (card: Omit<CardType, "id">) => void;
-  removeCard: (id: CardType["id"]) => void;
+  editCard: (card: CardType) => void;
+  removeCard: (card: CardType) => void;
   reverseCards: () => void;
 }
 
 export default React.createContext<AppContextDto>({
   addCardDrawerOpen: false,
-  setAddCardDrawerOpen: () => {},
+  setAddCardDrawerOpen: () => undefined,
   cards: [],
-  addCard: () => {},
-  removeCard: () => {},
-  reverseCards: () => {}
+  addCard: () => undefined,
+  editCard: () => undefined,
+  removeCard: () => undefined,
+  reverseCards: () => undefined
 });
